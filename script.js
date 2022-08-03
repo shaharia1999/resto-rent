@@ -1,0 +1,39 @@
+$(document).ready(function(){
+  $(".fa-hamburger").click(function(){
+      $(this).toggleClass('fa-times');
+      $("nav").toggleClass('nav-toggle')
+  });
+  $("nav ul li a").click(function(){
+    $(".fa-hamburger").removeClass('fa-times');
+    $("nav").removeClass('nav-toggle')
+});
+  var vedios=[".vid1",".vid2",".vid3"];
+
+    $(".dit1").click(function(){
+      $(".vid1").css('display','block','color','red');
+      $(".vid2").css('display','none');
+      $(".vid3").css('display','none');
+      $(".dit1").css('background-color','yellow');
+      $(".dit3").css('background-color','white');
+      $(".dit2").css('background-color','white');
+    })
+    $(".dit2").click(function(){
+      $(".vid1").css('display','none');
+      $(".vid2").css('display','block');
+      $(".vid3").css('display','none');
+      $(".dit1").css('background-color','white');
+      $(".dit3").css('background-color','white');
+      $(".dit2").css('background-color','yellow');
+    })
+    $(".dit3").click(function(){
+      $(".vid1").css('display','none');
+      $(".vid2").css('display','none');
+      $(".vid3").css('display','block');
+      $(".dit1").css('background-color','white');
+      $(".dit3").css('background-color','yellow');
+      $(".dit2").css('background-color','white');
+    })
+     $(window).scroll(function(){
+       $("header").toggleClass('sticky',$(this).scrollTop()>30)
+     })
+  });
